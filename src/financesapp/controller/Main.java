@@ -797,7 +797,47 @@ public class Main implements Initializable, Observer {
         double incTotal = this.SumIncome(new Period());
         
         //if (expTotal != 0 || incTotal != 0) {
- // error
+            pcData = FXCollections.observableArrayList();
+            pcData.add(new PieChart.Data("Despesas", expTotal));
+            pcData.add(new PieChart.Data("Receitas", incTotal));
+            typesChart.setData(pcData);
+            typesChart.setTitle("Despesas vs Receitas");
+            
+            // Mostra valores na tela do Gráfico de Pizza - Receita X Despesa
+            pcData.forEach(data ->
+                data.nameProperty().bind(
+                    Bindings.concat(
+                        data.getName(),
+                        " ",
+                        NumberFormat.getCurrencyInstance().format(data.pieValueProperty().getValue())
+                    )
+                )
+            );
+            
+            categories = FXCollections.observableArrayList();
+            for (ExpenseCategory categ : this.app.getExpenseCategories()) {
+                categories.add(
+                    new PieChart.Data(
+                        categ.getName(), this.app.getUser().getTotalByCategory(
+                            categ, Expense.class.getSimpleName(), new Period()
+                        )
+                    )
+                );
+            }
+            categoriesChart.setData(categories);
+            categoriesChart.setTitle("Categorias");
+            
+            // Mostra valores na tela do Gráfico de Pizza ( PieChart )  de Categorias
+            categories.forEach(data ->
+                data.nameProperty().bind(
+                    Bindings.concat(
+                        data.getName(),
+                        " ",
+                        NumberFormat.getCurrencyInstance().format(data.pieValueProperty().getValue())
+                    )
+                )
+            );
+            //////////////////////////////////////////
             //////////////////////////////////////////
         /*}
         else {
