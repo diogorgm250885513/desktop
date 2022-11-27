@@ -1,0 +1,703 @@
+{
+  "name": "Usuário Padrão",
+  "accounts": [
+    {
+      "name": "Carteira",
+      "type": "DefaultAccount",
+      "transactions": [
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Alimentação"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Income",
+          "category": "Empréstimo"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Alimentação"
+        },
+        {
+          "date": "2022-10-27",
+          "payments": [{
+            "date": "2022-10-27",
+            "concretized": true,
+            "value": 25
+          }],
+          "description": "Fardo de Polar",
+          "information": "",
+          "type": "Expense",
+          "category": "Item Pessoal"
+        },
+        {
+          "date": "2022-10-21",
+          "payments": [{
+            "date": "2022-10-21",
+            "concretized": true,
+            "value": 30
+          }],
+          "description": "Livro node.js",
+          "information": "",
+          "type": "Expense",
+          "category": "Educação"
+        },
+        {
+          "date": "2022-11-04",
+          "payments": [{
+            "date": "2022-10-04",
+            "concretized": true,
+            "value": 100
+          }],
+          "description": "Saque da conta Santader",
+          "information": "",
+          "type": "Income",
+          "category": "Renda"
+        }
+      ],
+      "openingBalance": 23.25
+    },
+    {
+      "name": "Caixa",
+      "type": "DefaultAccount",
+      "transactions": [
+        {
+          "date": "2022-11-07",
+          "payments": [{
+            "date": "2022-11-07",
+            "concretized": false,
+            "value": 120
+          }],
+          "description": "NET",
+          "information": "",
+          "type": "Expense",
+          "category": "Internet"
+        },
+        {
+          "date": "2022-11-08",
+          "payments": [{
+            "date": "2022-11-08",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste ",
+          "information": "sdf",
+          "type": "Expense",
+          "category": "Alimentação"
+        }
+      ],
+      "openingBalance": -125.47
+    },
+    {
+      "name": "Santander",
+      "type": "DefaultAccount",
+      "transactions": [
+        {
+          "date": "2022-11-07",
+          "payments": [{
+            "date": "2022-11-07",
+            "concretized": false,
+            "value": 50
+          }],
+          "description": "Barbearia",
+          "information": "",
+          "type": "Expense",
+          "category": "Beleza"
+        },
+        {
+          "date": "2022-11-08",
+          "payments": [{
+            "date": "2022-11-08",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "testes",
+          "information": "testse",
+          "type": "Expense",
+          "category": "Alimentação"
+        },
+        {
+          "date": "2022-10-19",
+          "payments": [{
+            "date": "2022-10-19",
+            "concretized": true,
+            "value": 74
+          }],
+          "description": "Supermerdao",
+          "information": "",
+          "type": "Expense",
+          "category": "Internet"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 400
+          }],
+          "description": "Bolsa Iniciação Científica",
+          "information": "",
+          "type": "Income",
+          "category": "Salário"
+        },
+        {
+          "date": "2015-05-05",
+          "payments": [{
+            "date": "2022-10-05",
+            "concretized": true,
+            "value": 400
+          }],
+          "description": "Bolsa Iniciação Científica",
+          "information": "",
+          "type": "Income",
+          "category": "Salário"
+        },
+        {
+          "date": "2017-05-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 400
+          }],
+          "description": "Bolsa Iniciação Científica",
+          "information": "",
+          "type": "Income",
+          "category": "Salário"
+        },
+        {
+          "date": "2022-10-04",
+          "payments": [{
+            "date": "2022-10-04",
+            "concretized": true,
+            "value": 100
+          }],
+          "description": "Saque para conta Carteira",
+          "information": "",
+          "type": "Expense",
+          "category": "Item Pessoal"
+        }
+      ],
+      "openingBalance": 215.05
+    },
+    {
+      "name": "Bolsa",
+      "type": "DefaultAccount",
+      "transactions": [
+        {
+          "date": "2022-11-07",
+          "payments": [{
+            "date": "2022-11-07",
+            "concretized": false,
+            "value": 146
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Investimento"
+        },
+        {
+          "date": "2022-10-14",
+          "payments": [{
+            "date": "2022-10-14",
+            "concretized": true,
+            "value": 14
+          }],
+          "description": "Sorvete",
+          "information": "",
+          "type": "Expense",
+          "category": "Item Pessoal"
+        }
+      ],
+      "openingBalance": 37.4
+    },
+    {
+      "name": "Poupança",
+      "type": "DefaultAccount",
+      "transactions": [
+        {
+          "date": "2022-11-07",
+          "payments": [{
+            "date": "2022-11-07",
+            "concretized": false,
+            "value": 60
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Justiça"
+        },
+        {
+          "date": "2022-11-08",
+          "payments": [{
+            "date": "2022-11-08",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "TESTE",
+          "information": "WSDF",
+          "type": "Expense",
+          "category": "Alimentação"
+        }
+      ],
+      "openingBalance": 398.89
+    },
+    {
+      "name": "Conta de teste",
+      "type": "DefaultAccount",
+      "transactions": [
+        {
+          "date": "2022-10-26",
+          "payments": [
+            {
+              "date": "2022-10-01",
+              "concretized": true,
+              "value": 10
+            },
+            {
+              "date": "2022-11-26",
+              "concretized": true,
+              "value": 10
+            },
+            {
+              "date": "2022-11-26",
+              "concretized": true,
+              "value": 10
+            },
+            {
+              "date": "2022-11-26",
+              "concretized": true,
+              "value": 10
+            },
+            {
+              "date": "2022-08-26",
+              "concretized": true,
+              "value": 10
+            }
+          ],
+          "description": "teste",
+          "information": "blah... blah... blah...",
+          "type": "Income",
+          "category": "Serviço"
+        },
+        {
+          "date": "2022-10-27",
+          "payments": [
+            {
+              "date": "2022-10-01",
+              "concretized": true,
+              "value": 105
+            },
+            {
+              "date": "2022-11-26",
+              "concretized": true,
+              "value": 10
+            },
+            {
+              "date": "2022-11-26",
+              "concretized": true,
+              "value": 105
+            },
+            {
+              "date": "2022-11-26",
+              "concretized": true,
+              "value": 10
+            },
+            {
+              "date": "2022-08-26",
+              "concretized": true,
+              "value": 10
+            }
+          ],
+          "description": "Grana in",
+          "information": "blah... blah... blah...5",
+          "type": "Income",
+          "category": "Empréstimo"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Saúde"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 2200
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Income",
+          "category": "Salário"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Alimentação"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Alimentação"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Income",
+          "category": "Empréstimo"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Alimentação"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Income",
+          "category": "Empréstimo"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Alimentação"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 51
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Beleza"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 52
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Dívida"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 53
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Educação"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 54
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Eletricidade"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 55
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Higiene"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 56
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Internet"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 57
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Investimento"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 58
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Item Pessoal"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 59
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Justiça"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 60
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Lazer"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 61
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Limpeza"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 62
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Moradia"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 63
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Pet"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 64
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Presente"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 65
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Saneamento"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 66
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Saúde"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 67
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Telefonia"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 68
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Terceiros"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 69
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Transporte"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 70
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "TV a Cabo"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 71
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Expense",
+          "category": "Vestuário"
+        },
+        {
+          "date": "2022-11-05",
+          "payments": [{
+            "date": "2022-11-05",
+            "concretized": true,
+            "value": 50
+          }],
+          "description": "teste",
+          "information": "",
+          "type": "Income",
+          "category": "Empréstimo"
+        }
+      ],
+      "openingBalance": 200
+    }
+  ]
+}
