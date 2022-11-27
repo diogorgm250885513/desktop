@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="FinancesApp.jar" size="76118" download="eager" />
+    <jar href="FinancesApp.jar" size="76799" download="eager" />
     <jar href="lib/json-20160212.jar" size="49176" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="financesapp.FinancesApp"  name="FinancesApp" />

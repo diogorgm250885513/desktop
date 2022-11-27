@@ -1,0 +1,9 @@
+{
+  "name": "Usuário Padrão",
+  "accounts": [{
+    "name": "Carteira",
+    "type": "DefaultAccount",
+    "transactions": [],
+    "openingBalance": 0
+  }]
+}
