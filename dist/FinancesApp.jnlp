@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FinancesApp.jnlp">
+  <information>
+    <title>FinancesApp</title>
+    <vendor>einhardt</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="FinancesApp.jar" size="76118" download="eager" />
+    <jar href="lib/json-20160212.jar" size="49176" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="financesapp.FinancesApp"  name="FinancesApp" />
+  <update check="always"/>
+</jnlp>

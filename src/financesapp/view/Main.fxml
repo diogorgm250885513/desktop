@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1100.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="financesapp.controller.Main">
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <center>        
+                <TabPane prefHeight="512.0" prefWidth="646.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab fx:id="transactionsTab" text="Transações">
+                            <content>
+                                <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="dateColunm" maxWidth="-1.0" minWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="Data" />
+                                        <TableColumn fx:id="descriptionColunm" maxWidth="-1.0" minWidth="150.0" prefWidth="250.0" style="-fx-alignment: center;" text="Descrição" />
+                                        <TableColumn fx:id="valueColunm" maxWidth="-1.0" minWidth="125.0" prefWidth="125.0" style="-fx-alignment: center;" text="Valor" />
+                                        <TableColumn fx:id="concretizedColunm" maxWidth="-1.0" minWidth="125.0" prefWidth="125.0" style="-fx-alignment: center;" text="Concretizado" />
+                                        <TableColumn fx:id="accountColunm" maxWidth="-1.0" minWidth="150.0" prefWidth="150.0" style="-fx-alignment: center;" text="Conta" />
+                                        <TableColumn fx:id="typeColunm" maxWidth="-1.0" minWidth="75.0" prefWidth="75.0" style="-fx-alignment: center;" text="Tipo" visible="false" />
+                                        <TableColumn fx:id="categoryColunm" maxWidth="-1.0" minWidth="150.0" prefWidth="180.0" style="-fx-alignment: center;" text="Categoria" />
+                                        <TableColumn fx:id="informationColunm" maxWidth="-1.0" minWidth="150.0" prefWidth="250.0" style="-fx-alignment: center;" text="Informações" />
+                                    </columns>
+                                    <contextMenu>
+                                        <ContextMenu>
+                                            <items>
+                                                <Menu mnemonicParsing="false" text="Adicionar">
+                                                    <items>
+                                                        <MenuItem mnemonicParsing="false" onAction="#onAddExpense" text="Despesa" />
+                                                        <MenuItem mnemonicParsing="false" onAction="#onAddIncome" text="Receita" />
+                                                        <!--<MenuItem mnemonicParsing="false" onAction="#onAddTransference" text="Transferência" />-->
+                                                    </items>
+                                                </Menu>
+                                                <SeparatorMenuItem mnemonicParsing="false" />
+                                                <MenuItem mnemonicParsing="false" onAction="#onEditTransaction" text="Editar" />
+                                                <SeparatorMenuItem mnemonicParsing="false" />
+                                                <MenuItem mnemonicParsing="false" onAction="#onDeletePayment" text="Remover" />
+                                                <MenuItem mnemonicParsing="false" onAction="#onDeleteTransaction" text="Remover transações associadas" />
+                                                <SeparatorMenuItem mnemonicParsing="false" />
+                                                <Menu mnemonicParsing="false" text="Filtrar">
+                                                    <items>
+                                                        <Menu mnemonicParsing="false" text="Por Tipo">
+                                                            <items>
+                                                                <MenuItem mnemonicParsing="false" onAction="#onFilterTypeByExpense" text="Despesas" />
+                                                                <MenuItem mnemonicParsing="false" onAction="#onFilterTypeByIncome" text="Receitas" />
+                                                                <MenuItem mnemonicParsing="false" text="Transferências" />
+                                                                <MenuItem mnemonicParsing="false" onAction="#onFilterTypeByNone" text="Todas as Transações" />
+                                                            </items>
+                                                        </Menu>
+                                                        <Menu mnemonicParsing="false" text="Por Categoria">
+                                                            <items>
+                                                                <Menu fx:id="contextFilterExpenseCategory" mnemonicParsing="false" text="Categorias de Despesas" />
+                                                                <Menu fx:id="contextFilterIncomeCategory" mnemonicParsing="false" text="Categorias de Receitas" />
+                                                                <MenuItem mnemonicParsing="false" onAction="#onDeleteCategoryFilter" text="Todas as Categorias" />
+                                                            </items>
+                                                        </Menu>
+                                                        <Menu fx:id="contextFilterAccount" mnemonicParsing="false" text="Por Conta" />
+                                                        <SeparatorMenuItem mnemonicParsing="false" />
+                                                        <MenuItem mnemonicParsing="false" onAction="#onDeleteFilters" text="Remover Filtros" />
+                                                    </items>
+                                                </Menu>
+                                            </items>
+                                        </ContextMenu>
+                                    </contextMenu>
+                                </TableView>
+                            </content>
+                        </Tab>
+                        <Tab text="Despesas por Categoria">
+                            <content>
+                                <BorderPane maxHeight="1000.0" minHeight="300.0" prefHeight="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <center>
+                                        <ScrollPane fx:id="expScrollPane" BorderPane.alignment="CENTER" />
+                                    </center>
+                                </BorderPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Receitas por Categoria">
+                            <content>
+                                <BorderPane maxHeight="1000.0" minHeight="300.0" prefHeight="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <center>
+                                        <ScrollPane fx:id="incScrollPane" BorderPane.alignment="CENTER" />
+                                    </center>
+                                </BorderPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Gráficos">
+                            <content>                                
+                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                    <center>
+                                        <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                            <content>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <PieChart fx:id="typesChart" minHeight="500.0" minWidth="500.0" />
+                                                        <PieChart fx:id="categoriesChart" minHeight="500.0" minWidth="500.0" />
+                                                    </children>
+                                                </HBox>
+                                            </content>
+                                        </ScrollPane>
+                                    </center>
+                                </BorderPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+        </BorderPane>
+    </center>
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Arquivo">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#onOpen" text="Abrir ..." />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#onNew" text="Novo" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#onSave" text="Salvar" />
+                                <MenuItem mnemonicParsing="false" onAction="#onSaveAs" text="Salvar como ..." />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#onExit" text="Sair" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Contas">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#onAccountsGestor" text="Gerenciar Contas" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Transações">
+                            <items>
+                                <Menu mnemonicParsing="false" text="Adicionar">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#onAddExpense" text="Despesa" />
+                                        <MenuItem mnemonicParsing="false" onAction="#onAddIncome" text="Receita" />
+                                        <!--<MenuItem mnemonicParsing="false" onAction="#onAddTransference" text="Transferência" />-->
+                                    </items>
+                                </Menu>
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#onEditTransaction" text="Editar" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <Menu mnemonicParsing="false" text="Filtrar">
+                                    <items>
+                                        <Menu mnemonicParsing="false" text="Por Tipo">
+                                            <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#onFilterTypeByExpense" text="Despesas" />
+                                                <MenuItem mnemonicParsing="false" onAction="#onFilterTypeByIncome" text="Receitas" />
+                                                <MenuItem mnemonicParsing="false" text="Transferências" />
+                                                <MenuItem mnemonicParsing="false" onAction="#onFilterTypeByNone" text="Todas as Transações" />
+                                            </items>
+                                        </Menu>
+                                        <Menu mnemonicParsing="false" text="Por Categoria">
+                                            <items>
+                                                <Menu fx:id="menuFilterExpenseCategory" mnemonicParsing="false" text="Categorias de Despesas" />
+                                                <Menu fx:id="menuFilterIncomeCategory" mnemonicParsing="false" text="Categorias de Receitas" />
+                                                <MenuItem mnemonicParsing="false" onAction="#onDeleteCategoryFilter" text="Todas as Categorias" />
+                                            </items>
+                                        </Menu>
+                                        <Menu fx:id="menuFilterAccount" mnemonicParsing="false" text="Por Conta" />
+                                        <SeparatorMenuItem mnemonicParsing="false" />
+                                        <MenuItem mnemonicParsing="false" onAction="#onDeleteFilters" text="Remover Filtros" />
+                                    </items>
+                                </Menu>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <Pane />
+                <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="1000.0">
+                    <items>
+                        <Button maxWidth="94.0" minWidth="94.0" mnemonicParsing="false" onAction="#onAddExpense" prefWidth="94.0" styleClass="expense-button-color" text="Adicionar Despesa" textAlignment="CENTER" wrapText="true" />
+                        <Button maxWidth="94.0" minWidth="94.0" mnemonicParsing="false" onAction="#onAddIncome" prefWidth="94.0" styleClass="income-button-color" text="Adicionar Receita" textAlignment="CENTER" wrapText="true" />
+                        <!--<Button maxWidth="94.0" minWidth="94.0" mnemonicParsing="false" onAction="#onAddTransference" prefWidth="94.0" styleClass="transference-button-color" text="Adicionar Transferência" textAlignment="CENTER" wrapText="true" />-->
+                        <Button maxWidth="94.0" minWidth="94.0" mnemonicParsing="false" onAction="#onAccountsGestor" prefWidth="94.0" text="Gerenciar Contas" textAlignment="CENTER" wrapText="true" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Pane prefWidth="650.0">
+                            <DatePicker fx:id="dateinicial" editable="false" layoutX="134.0" layoutY="11.0" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Data" visible="false" />
+                            <DatePicker fx:id="datefinal" editable="false" layoutX="394.0" layoutY="9.0" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Data" visible="false" />
+                            <Label fx:id="dtIncitial" layoutX="36.0" layoutY="16.0" text="Data Inicial:" visible="false" />
+                            <Label fx:id="dtFinal" layoutX="309.0" layoutY="16.0" text="Data Final:" visible="false" />
+                            <Button fx:id="Filtrar" layoutX="576.0" layoutY="9.0" mnemonicParsing="false" onAction="#onFilterIntervalo" text="Filtrar" visible="false" />
+                        </Pane>
+                        <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="48.0" prefWidth="119.0" text="Período" wrapText="true">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#onFilterCurrenMonth" text="Mês atual" />
+                                <MenuItem mnemonicParsing="false" onAction="#onFIlterLastMonth" text="Mês anterior" />
+                                <MenuItem mnemonicParsing="false" onAction="#onFilterInterval" text="Intervalo de Datas" />
+                                <MenuItem mnemonicParsing="false" onAction="#onFilterAllTime" text="Todas as Transações" />
+                            </items>
+                        </MenuButton>
+                        <!--<MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="48.0" prefWidth="119.0" text="Categorias" wrapText="true" />-->
+                    </items>
+                    <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                    </padding>
+                </ToolBar>
+            </children>
+        </VBox>
+    </top>
+</BorderPane>
